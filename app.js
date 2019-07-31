@@ -23,9 +23,27 @@ window.addEventListener("load", () => {
                     return response.json();
                 })
                 .then(data => {
-                    console.log(date);
-                })
-        })
+                    const { temperature, summary, icon } = data.currently;
+                    temperatureDegree.textContent = temperature;
+                    temperatureDescription.textContent = summary;
+                    locationTimezone.textContent = date.timezone;
+                     //Formula for celsius
+                     let celsius = (temperature - 32) * (5/9);
+                    //Set Icon
+                    setIcons(icon, document.querySelector(".icon"));
+
+                    //Change temperature to Celsius/Farenheit
+                    temperatureSection.addEventListener("click", () => {
+                        if (temperatureSpan.textContent === "F") {
+                            temperatureSpan.textContent = "C";
+                            temperatureDegree.textContent = Math.floor(celsius);
+                        } else {
+                            temperatureSpan.textContent = "F";
+                            temperatureDegree.textContent = temperature;
+                        }
+                    });
+                });
+        });
     }
 
 })

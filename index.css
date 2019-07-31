@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background: linear-gradient(rgb(5, 25, 27), rgb(24, 34, 88));
+    color: #dae0e7;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+ 
+  .clicked {
+    color: #7f8c8d;
+  }
+  
+  .form,
+  .greetings {
+    display: none;
+  }
+  
+  .showing {
+    display: block;
+  }

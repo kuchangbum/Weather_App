@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Weather_App</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-
-  <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
-    </div>
-    <div class="location">
-        <h1 class="location-timezone">Timezone</h1>
-        <canvas class="icon" width="128" height="128"></canvas>
-        <p>Icon</p>
-    </div>
-    <div class="temperature">
-        <div class="degree-section">
-            <h2 class="temperature-degree">34</h2>
-            <span>F</span>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App - JavaScript</title>
+    <link rel="stylesheet" href="font/Rimouski.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="app-title">
+            <p>Weather</p>
         </div>
-        <div class="temperature-description">Its friggin cold!</div>
+        <div class="notification"> </div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="temperature-value">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+                <p> - </p>
+            </div>
+            <div class="location">
+                <p>-</p>
+            </div>
+            <div class="js-clock">
+                <h1>00:00</h1>
+              </div>
+        </div>
     </div>
-
     <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
+        <input type="text" placeholder="What is your name?" />
     </form>
-    <h4 class="js-greetings greetings"></h4>
-    <script src="clock.js"></script>
-    <script src="gretting.js"></script>
-    <script src="skycons.js"></script>
-    <script src="app.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  </body>
+      <h4 class="js-greetings greetings"></h4>
+      <script src="clock.js"></script>
+      <script src="gretting.js"></script>
+      <script src="app.js"></script>
+    
+</body>
 </html>
+
+
